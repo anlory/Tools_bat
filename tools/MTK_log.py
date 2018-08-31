@@ -30,5 +30,7 @@ exec_cmd("adb pull /sdcard/mtklog")
 exec_cmd("adb pull /data/aee_exp  ./system_db")
 exec_cmd("adb pull /data/vendor/mtklog/aee_exp  ./vendor_db")
 exec_cmd("adb pull /data/anr  ./anr")
+exec_cmd("adb pull /data/tombstones  ./tombstones")
+
 print("Get Log Success!")
 time.sleep(5)

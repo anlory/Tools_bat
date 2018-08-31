@@ -13,7 +13,7 @@ for /f "skip=1" %%a in ('adb devices') do (
 	@echo ======================================
 )
 @echo  Copy all devices log End
-pause
+ping -n 30 127.0.0.1 > nul
 exit
 
 
