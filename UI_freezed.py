@@ -8,15 +8,23 @@ def exec_cmd_return(cmd):
 # os.system() no return
 def exec_cmd(cmd):
 	return os.system(cmd)
-	
+
+
+def getevent():
+	filename = "./getevent.txt"
+	getevent_file = open(filename, 'w')
+	logcmd = "adb shell getevent -l"
+	Poplog = subprocess.Popen(logcmd,stdout=getevent_file,stderr=subprocess.PIPE)
+	time.sleep(30)
+	Poplog.terminate()
 print("Get UI Freezed LOG...")
 
-cmd = "adb shell getevent  > getevent.txt"
+
 print("-------------------------------------------------")
 print("-------------------------------------------------")
 print("please preese Power Key Or Volume key manay times")
 print("-------------------------------------------------")
-exec_cmd(cmd)
+getevent()
 print("-----------------getevent  success---------------")
 cmd = "adb shell ps -A | grep system_server"
 ps_result = exec_cmd_return(cmd).split()
