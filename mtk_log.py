@@ -33,4 +33,4 @@ exec_cmd("adb pull /data/anr  ./anr")
 exec_cmd("adb pull /data/tombstones  ./tombstones")
 
 print("Get Log Success!")
-time.sleep(5)
+anlory.short_pause()
