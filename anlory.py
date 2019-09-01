@@ -9,7 +9,7 @@ def exec_cmd_return(cmd):
 # os.system() no return
 def exec_cmd(cmd):
     print(cmd)
-    # return os.system(cmd)
+    return os.system(cmd)
 
 def exec_cmdlist(list):
     for cmd in list :
